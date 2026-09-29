@@ -1,56 +1,44 @@
-# Welcome to your Expo app 👋
+# Football Tracker
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Web-only foundation built with Next.js App Router, React, and strict TypeScript.
+This stage contains a minimal home page; football features are not implemented yet.
 
-## Get started
+## Requirements
 
-1. Install dependencies
+- Node.js 24.x (`nvm use` reads `.nvmrc`).
+- npm 11.x; the lockfile is maintained with npm 11.13.0.
 
-   ```bash
-   npm install
-   ```
+No environment variables or external services are required.
 
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+## Local development
 
 ```bash
-npm run reset-project
+npm ci
+npm run dev
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Open [localhost:3000](http://localhost:3000). Edit `src/app/page.tsx` to change the home page.
 
-### Other setup steps
+## Verification and production
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+```bash
+npm run typecheck
+npm run build
+npm start
+```
 
-## Learn more
+`typecheck` generates Next.js route types before running TypeScript, so it also works
+on a clean checkout. `build` creates the production output in `.next/`; `start`
+serves that output on port 3000. Stop the development server before starting
+production on the same port, or pass `-- --port 3001` to either server command.
 
-To learn more about developing your project with Expo, look at the following resources:
+## Project structure
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- `src/app/layout.tsx`: root HTML layout and page metadata.
+- `src/app/page.tsx`: home route (`/`).
+- `src/global.css`: base web styles.
+- `assets/`: preserved project images and icons; import assets from source code
+  or place files in `public/` when they need a public URL.
 
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+The `@/*` alias maps to `src/*`; `@/assets/*` maps to `assets/*`.
+Expo and React Native runtime dependencies and platform configuration have been removed.
