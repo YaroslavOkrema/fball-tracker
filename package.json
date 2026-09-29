@@ -11,6 +11,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "format": "biome format --write .",
+    "lint": "biome lint --error-on-warnings .",
+    "check": "biome check --error-on-warnings .",
     "typecheck": "next typegen && tsc --noEmit"
   },
   "dependencies": {
@@ -19,6 +22,7 @@
     "react-dom": "19.2.3"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.5.14",
     "@types/node": "^24.19.0",
     "@types/react": "~19.2.2",
     "@types/react-dom": "~19.2.7",

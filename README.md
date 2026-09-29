@@ -19,16 +19,48 @@ npm run dev
 
 Open [localhost:3000](http://localhost:3000). Edit `src/app/page.tsx` to change the home page.
 
-## Verification and production
+## Code quality
+
+[Biome](https://biomejs.dev/) is the project's formatter and linter for TypeScript,
+TSX, JavaScript, CSS, and JSON configuration files.
 
 ```bash
+npm run format
+npm run lint
+npm run check
 npm run typecheck
+```
+
+- `format` writes formatting changes.
+- `lint` checks lint rules without changing files.
+- `check` checks formatting, lint rules, and import organization without changing
+  files. Both `lint` and `check` fail on warnings as well as errors.
+- `typecheck` generates Next.js route types before running TypeScript, so it also
+  works on a clean checkout.
+
+Biome respects `.gitignore` and excludes dependencies (`node_modules/`), generated
+Next.js output (`.next/`, `out/`, and `next-env.d.ts`), the npm lockfile, and preserved
+assets. Its settings are in `biome.json`.
+
+Run `npm run check` and `npm run typecheck` before committing. To apply safe lint
+and import fixes as well as formatting, use `npm run check -- --write`.
+
+### VS Code and Cursor
+
+Install the recommended `biomejs.biome` extension and open the repository root as
+your workspace. The settings in `.vscode/settings.json` enable Biome formatting,
+safe fixes, and import organization when explicitly saving supported source and
+configuration files (`Cmd+S` / `Ctrl+S`). Diagnostics appear while editing;
+auto-save is not required. The extension uses the project's installed Biome.
+
+## Production
+
+```bash
 npm run build
 npm start
 ```
 
-`typecheck` generates Next.js route types before running TypeScript, so it also works
-on a clean checkout. `build` creates the production output in `.next/`; `start`
+`build` creates the production output in `.next/`; `start`
 serves that output on port 3000. Stop the development server before starting
 production on the same port, or pass `-- --port 3001` to either server command.
 
