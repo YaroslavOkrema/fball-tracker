@@ -8,7 +8,15 @@ This stage contains a minimal home page; football features are not implemented y
 - Node.js 24.x (`nvm use` reads `.nvmrc`).
 - npm 11.x; the lockfile is maintained with npm 11.13.0.
 
-No environment variables or external services are required.
+The static UI needs no environment variables. Server-side football data calls
+require a free Football-Data.org key in `.env.local`:
+
+```text
+FOOTBALL_DATA_API_KEY=your_key_here
+```
+
+Copy `.env.example` to `.env.local` and replace the placeholder. Real `.env*`
+files are ignored by Git. Never use a `NEXT_PUBLIC_` variable for this key.
 
 The planned free-tier football data endpoints, field contract, and required
 account-specific smoke check are documented in
@@ -33,6 +41,7 @@ npm run format
 npm run lint
 npm run check
 npm run typecheck
+npm test
 ```
 
 - `format` writes formatting changes.
@@ -48,6 +57,21 @@ assets. Its settings are in `biome.json`.
 
 Run `npm run check` and `npm run typecheck` before committing. To apply safe lint
 and import fixes as well as formatting, use `npm run check -- --write`.
+
+`npm test` runs mocked football API client tests with Node's built-in test
+runner. It needs no key or live API connection. The Vitest and Playwright setup
+is tracked separately in FB-004.
+
+## Football data client
+
+Server Components can call `getFootballDataClient()` from
+`src/lib/football-data/server.ts`. The module is marked `server-only`; it reads
+`FOOTBALL_DATA_API_KEY` on the server and returns typed, compact data. It offers
+only the eight endpoint kinds in the [FB-005 contract](docs/football-data-api-contract.md),
+with validated IDs and competition codes, UTC dates, and ranges of at most 31
+days. Team match lists are limited to 100 entries per request. Errors expose a
+category and HTTP status without returning upstream bodies or the key. This
+foundation adds no browser API route because the current UI does not call it.
 
 ### VS Code and Cursor
 
