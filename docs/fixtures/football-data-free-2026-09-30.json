@@ -1,0 +1,687 @@
+{
+  "verifiedAtUtc": "2026-09-30T17:43:01+00:00",
+  "records": [
+    {
+      "endpoint": "competitions",
+      "path": "/competitions",
+      "checkedAtUtc": "2026-09-30T17:39:20+00:00",
+      "http": 200,
+      "contentType": "application/json",
+      "requestsAvailable": null,
+      "resetSeconds": "60",
+      "topLevelFields": ["competitions", "count", "filters"],
+      "count": 13
+    },
+    {
+      "endpoint": "competition detail",
+      "path": "/competitions/PL",
+      "checkedAtUtc": "2026-09-30T17:39:27+00:00",
+      "http": 200,
+      "contentType": "application/json",
+      "requestsAvailable": null,
+      "resetSeconds": "53",
+      "topLevelFields": [
+        "area",
+        "code",
+        "currentSeason",
+        "emblem",
+        "id",
+        "lastUpdated",
+        "name",
+        "seasons",
+        "type"
+      ]
+    },
+    {
+      "endpoint": "competition fixtures",
+      "path": "/competitions/PL/matches?dateFrom=2026-09-15&dateTo=2026-10-15",
+      "checkedAtUtc": "2026-09-30T17:39:34+00:00",
+      "http": 200,
+      "contentType": "application/json",
+      "requestsAvailable": null,
+      "resetSeconds": "46",
+      "topLevelFields": ["competition", "filters", "matches", "resultSet"],
+      "count": 20
+    },
+    {
+      "endpoint": "league standings",
+      "path": "/competitions/PL/standings",
+      "checkedAtUtc": "2026-09-30T17:39:41+00:00",
+      "http": 200,
+      "contentType": "application/json",
+      "requestsAvailable": null,
+      "resetSeconds": "39",
+      "topLevelFields": [
+        "area",
+        "competition",
+        "filters",
+        "season",
+        "standings"
+      ],
+      "count": 1
+    },
+    {
+      "endpoint": "daily matches",
+      "path": "/matches?date=2026-09-18",
+      "checkedAtUtc": "2026-09-30T17:39:48+00:00",
+      "http": 200,
+      "contentType": "application/json",
+      "requestsAvailable": null,
+      "resetSeconds": "32",
+      "topLevelFields": ["filters", "matches", "resultSet"],
+      "count": 8
+    },
+    {
+      "endpoint": "match detail",
+      "path": "/matches/560591",
+      "checkedAtUtc": "2026-09-30T17:39:55+00:00",
+      "http": 200,
+      "contentType": "application/json",
+      "requestsAvailable": null,
+      "resetSeconds": "25",
+      "topLevelFields": [
+        "area",
+        "awayTeam",
+        "competition",
+        "group",
+        "homeTeam",
+        "id",
+        "lastUpdated",
+        "matchday",
+        "odds",
+        "referees",
+        "score",
+        "season",
+        "stage",
+        "status",
+        "utcDate",
+        "venue"
+      ]
+    },
+    {
+      "endpoint": "team detail",
+      "path": "/teams/402",
+      "checkedAtUtc": "2026-09-30T17:40:02+00:00",
+      "http": 200,
+      "contentType": "application/json",
+      "requestsAvailable": null,
+      "resetSeconds": "18",
+      "topLevelFields": [
+        "address",
+        "area",
+        "clubColors",
+        "coach",
+        "crest",
+        "founded",
+        "id",
+        "lastUpdated",
+        "name",
+        "runningCompetitions",
+        "shortName",
+        "squad",
+        "staff",
+        "tla",
+        "venue",
+        "website"
+      ]
+    },
+    {
+      "endpoint": "team matches",
+      "path": "/teams/402/matches?dateFrom=2026-08-01&dateTo=2026-10-15&limit=100",
+      "checkedAtUtc": "2026-09-30T17:40:09+00:00",
+      "http": 200,
+      "contentType": "application/json",
+      "requestsAvailable": null,
+      "resetSeconds": "11",
+      "topLevelFields": ["filters", "matches", "resultSet"],
+      "count": 6
+    },
+    {
+      "endpoint": "cup standings",
+      "path": "/competitions/CL/standings",
+      "checkedAtUtc": "2026-09-30T17:40:16+00:00",
+      "http": 200,
+      "contentType": "application/json",
+      "requestsAvailable": null,
+      "resetSeconds": "4",
+      "topLevelFields": [
+        "area",
+        "competition",
+        "filters",
+        "season",
+        "standings"
+      ],
+      "count": 1
+    },
+    {
+      "endpoint": "cup fixtures",
+      "path": "/competitions/CL/matches?dateFrom=2026-09-01&dateTo=2026-10-15",
+      "checkedAtUtc": "2026-09-30T17:40:23+00:00",
+      "http": 200,
+      "contentType": "application/json",
+      "requestsAvailable": null,
+      "resetSeconds": "60",
+      "topLevelFields": ["competition", "filters", "matches", "resultSet"],
+      "count": 36
+    },
+    {
+      "endpoint": "additional cup detail",
+      "path": "/competitions/CLI",
+      "checkedAtUtc": "2026-09-30T17:40:30+00:00",
+      "http": 200,
+      "contentType": "application/json",
+      "requestsAvailable": null,
+      "resetSeconds": "53",
+      "topLevelFields": [
+        "area",
+        "code",
+        "currentSeason",
+        "emblem",
+        "id",
+        "lastUpdated",
+        "name",
+        "seasons",
+        "type"
+      ]
+    },
+    {
+      "endpoint": "additional cup fixtures",
+      "path": "/competitions/CLI/matches?dateFrom=2026-09-01&dateTo=2026-10-15",
+      "checkedAtUtc": "2026-09-30T17:40:37+00:00",
+      "http": 200,
+      "contentType": "application/json",
+      "requestsAvailable": null,
+      "resetSeconds": "46",
+      "topLevelFields": ["competition", "filters", "matches", "resultSet"],
+      "count": 9
+    },
+    {
+      "endpoint": "scheduled league fixture",
+      "path": "/competitions/PL/matches?dateFrom=2026-10-01&dateTo=2026-10-15",
+      "checkedAtUtc": "2026-09-30T17:42:53+00:00",
+      "http": 200,
+      "contentType": "application/json",
+      "count": 10
+    },
+    {
+      "endpoint": "additional cup standings",
+      "path": "/competitions/CLI/standings",
+      "checkedAtUtc": "2026-09-30T17:43:00+00:00",
+      "http": 404,
+      "contentType": "application/json",
+      "errorShape": ["error", "message"]
+    }
+  ],
+  "fixtures": {
+    "competitions": [
+      {
+        "id": 2013,
+        "code": "BSA",
+        "name": "Campeonato Brasileiro Série A",
+        "type": "LEAGUE",
+        "currentSeason": {
+          "id": 2474,
+          "startDate": "2026-01-28",
+          "endDate": "2026-12-02"
+        }
+      },
+      {
+        "id": 2016,
+        "code": "ELC",
+        "name": "Championship",
+        "type": "LEAGUE",
+        "currentSeason": {
+          "id": 2509,
+          "startDate": "2026-08-14",
+          "endDate": "2027-05-01"
+        }
+      },
+      {
+        "id": 2021,
+        "code": "PL",
+        "name": "Premier League",
+        "type": "LEAGUE",
+        "currentSeason": {
+          "id": 2502,
+          "startDate": "2026-08-21",
+          "endDate": "2027-05-30"
+        }
+      },
+      {
+        "id": 2001,
+        "code": "CL",
+        "name": "UEFA Champions League",
+        "type": "CUP",
+        "currentSeason": {
+          "id": 2557,
+          "startDate": "2026-09-08",
+          "endDate": "2027-01-27"
+        }
+      },
+      {
+        "id": 2018,
+        "code": "EC",
+        "name": "European Championship",
+        "type": "CUP",
+        "currentSeason": {
+          "id": 1537,
+          "startDate": "2024-06-14",
+          "endDate": "2024-07-14"
+        }
+      },
+      {
+        "id": 2015,
+        "code": "FL1",
+        "name": "Ligue 1",
+        "type": "LEAGUE",
+        "currentSeason": {
+          "id": 2497,
+          "startDate": "2026-08-22",
+          "endDate": "2027-05-29"
+        }
+      },
+      {
+        "id": 2002,
+        "code": "BL1",
+        "name": "Bundesliga",
+        "type": "LEAGUE",
+        "currentSeason": {
+          "id": 2522,
+          "startDate": "2026-08-28",
+          "endDate": "2027-05-22"
+        }
+      },
+      {
+        "id": 2019,
+        "code": "SA",
+        "name": "Serie A",
+        "type": "LEAGUE",
+        "currentSeason": {
+          "id": 2494,
+          "startDate": "2026-08-23",
+          "endDate": "2027-05-30"
+        }
+      },
+      {
+        "id": 2003,
+        "code": "DED",
+        "name": "Eredivisie",
+        "type": "LEAGUE",
+        "currentSeason": {
+          "id": 2493,
+          "startDate": "2026-08-07",
+          "endDate": "2027-05-23"
+        }
+      },
+      {
+        "id": 2017,
+        "code": "PPL",
+        "name": "Primeira Liga",
+        "type": "LEAGUE",
+        "currentSeason": {
+          "id": 2526,
+          "startDate": "2026-08-08",
+          "endDate": "2027-05-16"
+        }
+      },
+      {
+        "id": 2152,
+        "code": "CLI",
+        "name": "Copa Libertadores",
+        "type": "CUP",
+        "currentSeason": {
+          "id": 2466,
+          "startDate": "2026-02-04",
+          "endDate": "2026-11-28"
+        }
+      },
+      {
+        "id": 2014,
+        "code": "PD",
+        "name": "Primera Division",
+        "type": "LEAGUE",
+        "currentSeason": {
+          "id": 2518,
+          "startDate": "2026-08-16",
+          "endDate": "2027-05-30"
+        }
+      },
+      {
+        "id": 2000,
+        "code": "WC",
+        "name": "FIFA World Cup",
+        "type": "CUP",
+        "currentSeason": {
+          "id": 2398,
+          "startDate": "2026-06-11",
+          "endDate": "2026-07-19"
+        }
+      }
+    ],
+    "competitionDetail": {
+      "id": 2021,
+      "code": "PL",
+      "name": "Premier League",
+      "type": "LEAGUE",
+      "currentSeason": {
+        "id": 2502,
+        "startDate": "2026-08-21",
+        "endDate": "2027-05-30",
+        "currentMatchday": 6
+      }
+    },
+    "leagueMatches": [
+      {
+        "id": 560591,
+        "competitionId": 2021,
+        "utcDate": "2026-09-18T19:00:00Z",
+        "status": "FINISHED",
+        "matchday": 5,
+        "stage": "REGULAR_SEASON",
+        "group": null,
+        "homeTeam": {
+          "id": 402,
+          "name": "Brentford FC"
+        },
+        "awayTeam": {
+          "id": 61,
+          "name": "Chelsea FC"
+        },
+        "score": {
+          "fullTime": {
+            "home": 3,
+            "away": 0
+          }
+        }
+      },
+      {
+        "id": 560593,
+        "competitionId": 2021,
+        "utcDate": "2026-10-10T11:30:00Z",
+        "status": "TIMED",
+        "matchday": 6,
+        "stage": "REGULAR_SEASON",
+        "group": null,
+        "homeTeam": {
+          "id": 57,
+          "name": "Arsenal FC"
+        },
+        "awayTeam": {
+          "id": 341,
+          "name": "Leeds United FC"
+        },
+        "score": {
+          "fullTime": {
+            "home": null,
+            "away": null
+          }
+        }
+      }
+    ],
+    "leagueStandings": [
+      {
+        "type": "TOTAL",
+        "stage": "REGULAR_SEASON",
+        "group": "Matchday",
+        "table": [
+          {
+            "position": 1,
+            "team": {
+              "id": 65,
+              "name": "Manchester City FC"
+            },
+            "playedGames": 5,
+            "points": 15,
+            "form": null
+          },
+          {
+            "position": 2,
+            "team": {
+              "id": 57,
+              "name": "Arsenal FC"
+            },
+            "playedGames": 5,
+            "points": 12,
+            "form": null
+          }
+        ]
+      }
+    ],
+    "dailyMatches": [
+      {
+        "id": 576248,
+        "competitionId": 2152,
+        "utcDate": "2026-09-18T00:30:00Z",
+        "status": "FINISHED",
+        "matchday": null,
+        "stage": "QUARTER_FINALS",
+        "group": null,
+        "homeTeam": {
+          "id": 1783,
+          "name": "CR Flamengo"
+        },
+        "awayTeam": {
+          "id": 6989,
+          "name": "CAR Independiente del Valle"
+        },
+        "score": {
+          "fullTime": {
+            "home": 1,
+            "away": 1
+          }
+        }
+      },
+      {
+        "id": 558888,
+        "competitionId": 2003,
+        "utcDate": "2026-09-18T18:00:00Z",
+        "status": "FINISHED",
+        "matchday": 7,
+        "stage": "REGULAR_SEASON",
+        "group": null,
+        "homeTeam": {
+          "id": 677,
+          "name": "FC Groningen"
+        },
+        "awayTeam": {
+          "id": 684,
+          "name": "PEC Zwolle"
+        },
+        "score": {
+          "fullTime": {
+            "home": 3,
+            "away": 0
+          }
+        }
+      }
+    ],
+    "matchDetail": {
+      "id": 560591,
+      "competitionId": 2021,
+      "utcDate": "2026-09-18T19:00:00Z",
+      "status": "FINISHED",
+      "matchday": 5,
+      "stage": "REGULAR_SEASON",
+      "group": null,
+      "homeTeam": {
+        "id": 402,
+        "name": "Brentford FC"
+      },
+      "awayTeam": {
+        "id": 61,
+        "name": "Chelsea FC"
+      },
+      "score": {
+        "fullTime": {
+          "home": 3,
+          "away": 0
+        }
+      }
+    },
+    "teamDetail": {
+      "id": 402,
+      "name": "Brentford FC",
+      "shortName": "Brentford",
+      "tla": "BRE",
+      "crest": "https://crests.football-data.org/402.png",
+      "venue": "Griffin Park"
+    },
+    "teamMatches": [
+      {
+        "id": 560547,
+        "competitionId": 2021,
+        "utcDate": "2026-08-22T16:30:00Z",
+        "status": "FINISHED",
+        "matchday": 1,
+        "stage": "REGULAR_SEASON",
+        "group": null,
+        "homeTeam": {
+          "id": 402,
+          "name": "Brentford FC"
+        },
+        "awayTeam": {
+          "id": 73,
+          "name": "Tottenham Hotspur FC"
+        },
+        "score": {
+          "fullTime": {
+            "home": 3,
+            "away": 0
+          }
+        }
+      },
+      {
+        "id": 560559,
+        "competitionId": 2021,
+        "utcDate": "2026-08-30T13:00:00Z",
+        "status": "FINISHED",
+        "matchday": 2,
+        "stage": "REGULAR_SEASON",
+        "group": null,
+        "homeTeam": {
+          "id": 341,
+          "name": "Leeds United FC"
+        },
+        "awayTeam": {
+          "id": 402,
+          "name": "Brentford FC"
+        },
+        "score": {
+          "fullTime": {
+            "home": 1,
+            "away": 1
+          }
+        }
+      }
+    ],
+    "cupStandings": [
+      {
+        "type": "TOTAL",
+        "group": "League phase",
+        "rowCount": 36
+      }
+    ],
+    "cupMatches": [
+      {
+        "id": 575323,
+        "competitionId": 2001,
+        "utcDate": "2026-09-08T16:45:00Z",
+        "status": "FINISHED",
+        "matchday": 1,
+        "stage": "LEAGUE_STAGE",
+        "group": null,
+        "homeTeam": {
+          "id": 851,
+          "name": "Club Brugge KV"
+        },
+        "awayTeam": {
+          "id": 58,
+          "name": "Aston Villa FC"
+        },
+        "score": {
+          "fullTime": {
+            "home": 2,
+            "away": 3
+          }
+        }
+      },
+      {
+        "id": 575324,
+        "competitionId": 2001,
+        "utcDate": "2026-09-08T16:45:00Z",
+        "status": "FINISHED",
+        "matchday": 1,
+        "stage": "LEAGUE_STAGE",
+        "group": null,
+        "homeTeam": {
+          "id": 1899,
+          "name": "PAE AEK"
+        },
+        "awayTeam": {
+          "id": 2016,
+          "name": "LASK Linz"
+        },
+        "score": {
+          "fullTime": {
+            "home": 1,
+            "away": 0
+          }
+        }
+      }
+    ],
+    "additionalCupDetail": {
+      "id": 2152,
+      "code": "CLI",
+      "name": "Copa Libertadores",
+      "type": "CUP"
+    },
+    "additionalCupMatches": [
+      {
+        "id": 557183,
+        "competitionId": 2152,
+        "utcDate": "2026-09-08T22:00:00Z",
+        "status": "FINISHED",
+        "matchday": null,
+        "stage": "QUARTER_FINALS",
+        "group": null,
+        "homeTeam": {
+          "id": 1765,
+          "name": "Fluminense FC"
+        },
+        "awayTeam": {
+          "id": 7580,
+          "name": "CA Platense"
+        },
+        "score": {
+          "fullTime": {
+            "home": 2,
+            "away": 0
+          }
+        }
+      },
+      {
+        "id": 557182,
+        "competitionId": 2152,
+        "utcDate": "2026-09-09T22:00:00Z",
+        "status": "FINISHED",
+        "matchday": null,
+        "stage": "QUARTER_FINALS",
+        "group": null,
+        "homeTeam": {
+          "id": 1769,
+          "name": "SE Palmeiras"
+        },
+        "awayTeam": {
+          "id": 4528,
+          "name": "LDU de Quito"
+        },
+        "score": {
+          "fullTime": {
+            "home": 1,
+            "away": 0
+          }
+        }
+      }
+    ]
+  }
+}

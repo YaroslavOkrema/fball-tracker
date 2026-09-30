@@ -10,6 +10,10 @@ This stage contains a minimal home page; football features are not implemented y
 
 No environment variables or external services are required.
 
+The planned free-tier football data endpoints, field contract, and required
+account-specific smoke check are documented in
+[docs/football-data-api-contract.md](docs/football-data-api-contract.md).
+
 ## Local development
 
 ```bash
